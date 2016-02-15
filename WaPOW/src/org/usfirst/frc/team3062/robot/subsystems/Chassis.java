@@ -15,20 +15,20 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Chassis extends Subsystem {
     RobotDrive myRobot;  // class that handles basic drive operations
-    Jaguar leftFront;
-    Jaguar leftRear;
-    Jaguar rightFront;
-    Jaguar rightRear;
+    CANJaguar leftFront;
+    CANJaguar leftRear;
+    CANJaguar rightFront;
+    CANJaguar rightRear;
     Encoder leftEncoder;
     Encoder rightEncoder;
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
    
     public Chassis() {
-		leftFront = new Jaguar(0);
-    	leftRear = new Jaguar(1);
-    	rightFront = new Jaguar(2);
-    	rightRear = new Jaguar(3);
+		leftFront = new CANJaguar(0);
+    	leftRear = new CANJaguar(1);
+    	rightFront = new CANJaguar(2);
+    	rightRear = new CANJaguar(3);
     	leftEncoder = new Encoder(0,1);
     	rightEncoder = new Encoder(2,3); 
   
