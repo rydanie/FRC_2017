@@ -25,10 +25,10 @@ public class Chassis extends Subsystem {
     // here. Call these from Commands.
    
     public Chassis() {
-		leftFront = new CANJaguar(0);
-    	leftRear = new CANJaguar(1);
-    	rightFront = new CANJaguar(2);
-    	rightRear = new CANJaguar(3);
+		leftFront = new CANJaguar(1);
+    	leftRear = new CANJaguar(2);
+    	rightFront = new CANJaguar(3);
+    	rightRear = new CANJaguar(4);
     	leftEncoder = new Encoder(0,1);
     	rightEncoder = new Encoder(2,3); 
   
