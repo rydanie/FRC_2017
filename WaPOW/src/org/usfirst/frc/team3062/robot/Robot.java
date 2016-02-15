@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.usfirst.frc.team3062.robot.commands.ExampleCommand;
 import org.usfirst.frc.team3062.robot.subsystems.Chassis;
 import org.usfirst.frc.team3062.robot.subsystems.ExampleSubsystem;
+import org.usfirst.frc.team3062.robot.subsystems.Shooter;
 
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -25,7 +26,7 @@ public class Robot extends IterativeRobot {
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 	public static final Chassis chassis = new Chassis();
-	
+	public static final Shooter shooter = new Shooter();
 
 	//added this
 	Command teleopCommand;
@@ -97,6 +98,9 @@ public class Robot extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
+        
+        // hack to temporarily set speed
+        shooter.setSpeed( 1.0 );
     }
 
     /**

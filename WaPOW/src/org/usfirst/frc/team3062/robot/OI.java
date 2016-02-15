@@ -4,7 +4,8 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
-import org.usfirst.frc.team3062.robot.commands.ExampleCommand;
+
+import org.usfirst.frc.team3062.robot.commands.*;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -38,20 +39,62 @@ public class OI {
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
 
-	Joystick leftStick = new Joystick(0);
-	Joystick rightStick = new Joystick(1);
-	JoystickButton homeButton = new JoystickButton(rightStick, 1);
-	JoystickButton upButton = new JoystickButton(rightStick, 3);
-	JoystickButton downButton = new JoystickButton(rightStick, 2); 
-	JoystickButton topButton = new JoystickButton(leftStick, 1);
+/*
+ * The buttons on the controller follow this mapping
+
+1: A
+2: B
+3: X
+4: Y
+5: Left Bumper
+6: Right Bumper
+7: Back
+8: Start
+9: Left Joystick
+10: Right Joystick
+
+The axis on the controller follow this mapping
+(all output is between -1 and 1)
+1: Left Stick X Axis
+-Left:Negative ; Right: Positive
+2: Left Stick Y Axis
+-Up: Negative ; Down: Positive
+3: Triggers
+-Left: Positive ; Right: Negative
+4: Right Stick X Axis
+-Left: Negative ; Right: Positive
+5: Right Stick Y Axis
+-Up: Negative ; Down: Positive
+6: Directional Pad (Not recommended, buggy)
+
+ */
 	
+	
+	Joystick driverStick = new Joystick(0);
+	Joystick alternateStick = new Joystick(1);
+	JoystickButton shooterOnButton = new JoystickButton( driverStick, 1 );
+	JoystickButton shooterOffButton = new JoystickButton( driverStick, 2 );
+	//JoystickButton shootButton = new JoystickButton(rightStick, 1);
+	//JoystickButton upButton = new JoystickButton(rightStick, 3);
+	//JoystickButton downButton = new JoystickButton(rightStick, 2); 
+	//JoystickButton topButton = new JoystickButton(leftStick, 1);
+	
+	ShooterOn shooterOn = new ShooterOn();
+	ShooterOff shooterOff = new ShooterOff();
+	
+	
+	
+	public OI() {
+		shooterOnButton.whenPressed(shooterOn);
+		shooterOffButton.whenPressed(shooterOff);;
+	}
 
 	public double getLeftSpeed() {
-		return -leftStick.getY();
+		return -driverStick.getRawAxis(2);
 	}
 	
 	public double getRightSpeed() {
-		return -rightStick.getY();
+		return -driverStick.getRawAxis(5);
 	}
 }
 

@@ -6952,3 +6952,225 @@ Java Model Exception: Java Model Status [pi [in Robot [in [Working copy] Robot.j
 	at org.eclipse.jdt.internal.ui.infoviews.AbstractInfoView$2.run(AbstractInfoView.java:717)
 !SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-02-04 16:01:54.107
 !MESSAGE pi [in Robot [in [Working copy] Robot.java [in org.usfirst.frc.team3062.robot [in src [in WaPOW]]]]] does not exist
+!SESSION 2016-02-15 11:10:40.200 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_72
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-02-15 11:10:44.219
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-15 11:11:03.936
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-15 11:11:04.889
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-15 11:11:04.904
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-15 11:11:04.935
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-15 11:11:04.951
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-15 11:11:04.998
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-15 11:11:04.998
+!MESSAGE Installedjava
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2016-02-15 11:19:51.411
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [shoot [in Robot [in [Working copy] Robot.java [in org.usfirst.frc.team3062.robot [in src [in WaPOW]]]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:590)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.SourceRefElement.getSourceRange(SourceRefElement.java:218)
+	at org.eclipse.jdt.internal.core.Member.getJavadocRange(Member.java:291)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContentFromSource(JavadocContentAccess2.java:601)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:496)
+	at org.eclipse.jdt.internal.ui.infoviews.JavadocView.getJavadocHtml(JavadocView.java:1097)
+	at org.eclipse.jdt.internal.ui.infoviews.JavadocView.computeInput(JavadocView.java:908)
+	at org.eclipse.jdt.internal.ui.infoviews.AbstractInfoView$2.run(AbstractInfoView.java:717)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-02-15 11:19:51.458
+!MESSAGE shoot [in Robot [in [Working copy] Robot.java [in org.usfirst.frc.team3062.robot [in src [in WaPOW]]]]] does not exist
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2016-02-15 11:19:51.474
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [shoo [in Robot [in [Working copy] Robot.java [in org.usfirst.frc.team3062.robot [in src [in WaPOW]]]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:590)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.SourceRefElement.getSourceRange(SourceRefElement.java:218)
+	at org.eclipse.jdt.internal.core.Member.getJavadocRange(Member.java:291)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContentFromSource(JavadocContentAccess2.java:601)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:496)
+	at org.eclipse.jdt.internal.ui.infoviews.JavadocView.getJavadocHtml(JavadocView.java:1097)
+	at org.eclipse.jdt.internal.ui.infoviews.JavadocView.computeInput(JavadocView.java:908)
+	at org.eclipse.jdt.internal.ui.infoviews.AbstractInfoView$2.run(AbstractInfoView.java:717)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-02-15 11:19:51.474
+!MESSAGE shoo [in Robot [in [Working copy] Robot.java [in org.usfirst.frc.team3062.robot [in src [in WaPOW]]]]] does not exist
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:48:46.713
+!MESSAGE [org.usfirst.frc.team3062.robot.commands [in src [in WaPOW]]
+  [Working copy] DriveWithJoystick.java
+    package org.usfirst.frc.team3062.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard
+    import org.usfirst.frc.team3062.robot.Robot
+    import org.usfirst.frc.team3062.robot.subsystems.Chassis
+    class DriveWithJoystick
+      DriveWithJoystick()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  LoadShooter.java (not open)
+  ExampleCommand.java
+    package org.usfirst.frc.team3062.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import org.usfirst.frc.team3062.robot.Robot
+    class ExampleCommand
+      ExampleCommand()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:48:46.713
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:48:46.745
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:48:46.760
+!MESSAGE Project: P/WaPOW
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:49:00.621
+!MESSAGE Class: ShooterOn Package: org.usfirst.frc.team3062.robot.commands
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:49:12.166
+!MESSAGE [org.usfirst.frc.team3062.robot.commands [in src [in WaPOW]]
+  [Working copy] DriveWithJoystick.java
+    package org.usfirst.frc.team3062.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard
+    import org.usfirst.frc.team3062.robot.Robot
+    import org.usfirst.frc.team3062.robot.subsystems.Chassis
+    class DriveWithJoystick
+      DriveWithJoystick()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  LoadShooter.java (not open)
+  ExampleCommand.java
+    package org.usfirst.frc.team3062.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import org.usfirst.frc.team3062.robot.Robot
+    class ExampleCommand
+      ExampleCommand()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  ShooterOn.java
+    package org.usfirst.frc.team3062.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    class ShooterOn
+      ShooterOn()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:49:12.182
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:49:12.197
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:49:12.197
+!MESSAGE Project: P/WaPOW
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:49:19.904
+!MESSAGE Class: ShooterOff Package: org.usfirst.frc.team3062.robot.commands
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:49:30.358
+!MESSAGE [org.usfirst.frc.team3062.robot.commands [in src [in WaPOW]]
+  [Working copy] DriveWithJoystick.java
+    package org.usfirst.frc.team3062.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard
+    import org.usfirst.frc.team3062.robot.Robot
+    import org.usfirst.frc.team3062.robot.subsystems.Chassis
+    class DriveWithJoystick
+      DriveWithJoystick()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  LoadShooter.java (not open)
+  ExampleCommand.java
+    package org.usfirst.frc.team3062.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import org.usfirst.frc.team3062.robot.Robot
+    class ExampleCommand
+      ExampleCommand()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  ShooterOn.java
+    package org.usfirst.frc.team3062.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    class ShooterOn
+      ShooterOn()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  ShooterOff.java
+    package org.usfirst.frc.team3062.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    class ShooterOff
+      ShooterOff()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:49:30.358
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:49:30.389
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:49:30.404
+!MESSAGE Project: P/WaPOW
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:49:40.457
+!MESSAGE Class: ShooterUpdateSpeed Package: org.usfirst.frc.team3062.robot.commands

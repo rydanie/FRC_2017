@@ -1,0 +1,24 @@
+package org.usfirst.frc.team3062.robot.subsystems;
+
+import edu.wpi.first.wpilibj.CANTalon;
+import edu.wpi.first.wpilibj.command.Subsystem;
+
+public class Shooter extends Subsystem {
+	
+	CANTalon rightshooter; 
+	CANTalon leftshooter;
+			
+
+	public Shooter(){
+		
+		rightshooter = new CANTalon(1);
+		leftshooter = new CANTalon(2);
+	}
+
+
+	@Override
+	protected void initDefaultCommand() {
+		// TODO Auto-generated method stub
+		
+	}
+}
