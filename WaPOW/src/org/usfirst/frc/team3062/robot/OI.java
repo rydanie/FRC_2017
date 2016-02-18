@@ -89,8 +89,9 @@ The axis on the controller follow this mapping
 		shooterOffButton.whenPressed(shooterOff);;
 	}
 
-	public double getLeftSpeed() {
+	public double getLeftSpeed() {	
 		return -driverStick.getRawAxis(2);
+	
 	}
 	
 	public double getRightSpeed() {
