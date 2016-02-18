@@ -26,7 +26,12 @@ public class DriveWithJoystick extends Command {
     	Robot.chassis.driveWithJoystick( Robot.oi.getLeftSpeed(), Robot.oi.getRightSpeed() );
     	SmartDashboard.putNumber("Left Speed", Robot.chassis.getLeftEncoder());
     	SmartDashboard.putNumber("Right Speed", Robot.chassis.getRightEncoder());
+    	
     }    
+    
+    protected void deadBand(double leftAxis, double rightAxis){
+    	
+    }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
