@@ -12,7 +12,7 @@ public class ShooterOn extends Command {
     public ShooterOn() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-    	requires( Robot.shooter );
+    	require( Robot.shooter );
     }
 
     // Called just before this Command runs the first time
