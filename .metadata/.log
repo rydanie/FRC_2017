@@ -7174,3 +7174,153 @@ Java Model Exception: Java Model Status [shoo [in Robot [in [Working copy] Robot
 
 !ENTRY WPILib_Java_Robot_Development 1 0 2016-02-15 13:49:40.457
 !MESSAGE Class: ShooterUpdateSpeed Package: org.usfirst.frc.team3062.robot.commands
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 16:02:23.180
+!MESSAGE [org.usfirst.frc.team3062.robot.subsystems [in src [in WaPOW]]
+  [Working copy] Chassis.java
+    package org.usfirst.frc.team3062.robot.subsystems
+    import org.usfirst.frc.team3062.robot.Robot
+    import org.usfirst.frc.team3062.robot.commands.DriveWithJoystick
+    import edu.wpi.first.wpilibj.Jaguar
+    import edu.wpi.first.wpilibj.RobotDrive
+    import edu.wpi.first.wpilibj.command.Subsystem
+    import edu.wpi.first.wpilibj.Encoder
+    import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard
+    class Chassis
+      RobotDrive myRobot
+      Jaguar leftFront
+      Jaguar leftRear
+      Jaguar rightFront
+      Jaguar rightRear
+      Encoder leftEncoder
+      Encoder rightEncoder
+      Chassis()
+      void initDefaultCommand()
+      void driveWithJoystick(double, double)
+      double getLeftEncoder()
+      double getRightEncoder()
+  [Working copy] Shooter.java
+    package org.usfirst.frc.team3062.robot.subsystems
+    import edu.wpi.first.wpilibj.CANTalon
+    import edu.wpi.first.wpilibj.RobotDrive
+    import edu.wpi.first.wpilibj.command.Subsystem
+    class Shooter
+      CANTalon rightshooter
+      CANTalon leftshooter
+      double speed
+      boolean active
+      Shooter()
+      void setSpeed(double)
+      void start()
+      void stop()
+      void initDefaultCommand()
+  [Working copy] Pickup.java
+    package org.usfirst.frc.team3062.robot.subsystems
+    import edu.wpi.first.wpilibj.Relay
+    class Pickup
+      Relay pickupRelay
+  [Working copy] Cradle.java
+    package org.usfirst.frc.team3062.robot.subsystems
+    import edu.wpi.first.wpilibj.Servo
+    import edu.wpi.first.wpilibj.command.Subsystem
+    class Cradle
+      Servo cradleServo
+      boolean active
+      double loadAngle
+      Cradle()
+      void shoot()
+      void initDefaultCommand()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 16:02:23.212
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 16:02:23.274
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 16:02:23.290
+!MESSAGE Project: P/WaPOW
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 16:02:36.222
+!MESSAGE Class: Catapult Package: org.usfirst.frc.team3062.robot.subsystems
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 16:12:40.972
+!MESSAGE [org.usfirst.frc.team3062.robot.commands [in src [in WaPOW]]
+  [Working copy] DriveWithJoystick.java
+    package org.usfirst.frc.team3062.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard
+    import org.usfirst.frc.team3062.robot.Robot
+    import org.usfirst.frc.team3062.robot.subsystems.Chassis
+    class DriveWithJoystick
+      DriveWithJoystick()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  [Working copy] LoadShooter.java
+    package org.usfirst.frc.team3062.robot.commands
+    class LoadShooter
+  [Working copy] ShooterOn.java
+    package org.usfirst.frc.team3062.robot.commands
+    import org.usfirst.frc.team3062.robot.Robot
+    import edu.wpi.first.wpilibj.command.Command
+    class ShooterOn
+      ShooterOn()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  [Working copy] ShooterOff.java
+    package org.usfirst.frc.team3062.robot.commands
+    import org.usfirst.frc.team3062.robot.Robot
+    import edu.wpi.first.wpilibj.command.Command
+    class ShooterOff
+      ShooterOff()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  [Working copy] ShooterUpdateSpeed.java
+    package org.usfirst.frc.team3062.robot.commands
+    import org.usfirst.frc.team3062.robot.Robot
+    import edu.wpi.first.wpilibj.command.Command
+    class ShooterUpdateSpeed
+      ShooterUpdateSpeed()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 16:12:40.972
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 16:12:41.003
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 16:12:41.018
+!MESSAGE Project: P/WaPOW
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-22 16:12:55.060
+!MESSAGE Class: Launch Package: org.usfirst.frc.team3062.robot.commands
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2016-02-22 16:18:10.339
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [cata [in Robot [in [Working copy] Robot.java [in org.usfirst.frc.team3062.robot [in src [in WaPOW]]]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:590)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.SourceRefElement.getSourceRange(SourceRefElement.java:218)
+	at org.eclipse.jdt.internal.core.Member.getJavadocRange(Member.java:291)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContentFromSource(JavadocContentAccess2.java:601)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:496)
+	at org.eclipse.jdt.internal.ui.infoviews.JavadocView.getJavadocHtml(JavadocView.java:1097)
+	at org.eclipse.jdt.internal.ui.infoviews.JavadocView.computeInput(JavadocView.java:908)
+	at org.eclipse.jdt.internal.ui.infoviews.AbstractInfoView$2.run(AbstractInfoView.java:717)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-02-22 16:18:10.354
+!MESSAGE cata [in Robot [in [Working copy] Robot.java [in org.usfirst.frc.team3062.robot [in src [in WaPOW]]]]] does not exist

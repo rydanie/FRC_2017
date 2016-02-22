@@ -72,9 +72,8 @@ The axis on the controller follow this mapping
 	
 	Joystick driverStick = new Joystick(0);
 	Joystick alternateStick = new Joystick(1);
-	JoystickButton launchButton = new JoystickButton(driverStick, 6);
-	JoystickButton shooterOnButton = new JoystickButton( driverStick, 3 );
-	JoystickButton shooterOffButton = new JoystickButton( driverStick, 4 );
+	JoystickButton shooterOnButton = new JoystickButton( driverStick, 1 );
+	JoystickButton shooterOffButton = new JoystickButton( driverStick, 2 );
 	//JoystickButton shootButton = new JoystickButton(rightStick, 1);
 	//JoystickButton upButton = new JoystickButton(rightStick, 3);
 	//JoystickButton downButton = new JoystickButton(rightStick, 2); 
@@ -82,13 +81,12 @@ The axis on the controller follow this mapping
 	
 	ShooterOn shooterOn = new ShooterOn();
 	ShooterOff shooterOff = new ShooterOff();
-	Launch launchCmd = new Launch();
+	
 	
 	
 	public OI() {
 		shooterOnButton.whenPressed(shooterOn);
-		shooterOffButton.whenPressed(shooterOff);
-		launchButton.whenPressed(launchCmd);
+		shooterOffButton.whenPressed(shooterOff);;
 	}
 
 	public double getLeftSpeed() {	

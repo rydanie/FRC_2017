@@ -1,20 +1,19 @@
 package org.usfirst.frc.team3062.robot.commands;
 
-import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-
 import org.usfirst.frc.team3062.robot.Robot;
-import org.usfirst.frc.team3062.robot.subsystems.Chassis;
+
+import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class DriveWithJoystick extends Command {
+public class Launch extends Command {
 
-    public DriveWithJoystick() {
+    public Launch() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-    	requires(Robot.chassis);
+    	requires(Robot.catapult);
     }
 
     // Called just before this Command runs the first time
@@ -24,26 +23,12 @@ public class DriveWithJoystick extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	
-    	double leftSpeed = Robot.oi.getLeftSpeed();
-    	double rightSpeed = Robot.oi.getRightSpeed();
-    	if(leftSpeed > .1 || leftSpeed < -.1){
-    		leftSpeed = 0;
-    	}
+    	Robot.catapult.extend();
     	
-    	if(rightSpeed > .1 || rightSpeed < -.1){
-    		rightSpeed = 0;
-    	}
+    	Timer.delay(.5);
     	
-    	Robot.chassis.driveWithJoystick( leftSpeed, rightSpeed );
-    	
-    	SmartDashboard.putNumber("Left Speed", Robot.chassis.getLeftEncoder());
-    	SmartDashboard.putNumber("Right Speed", Robot.chassis.getRightEncoder());
-    	
-    	
-    	
-    }    
-    
-   
+    	Robot.catapult.retract();
+    }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
