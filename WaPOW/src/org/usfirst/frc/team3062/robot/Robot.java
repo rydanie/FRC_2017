@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
+import org.usfirst.frc.team3062.robot.commands.AutonomousCommand;
 //import org.usfirst.frc.team3062.robot.commands.ExampleCommand;
 import org.usfirst.frc.team3062.robot.subsystems.Catapult;
 import org.usfirst.frc.team3062.robot.subsystems.Chassis;
@@ -32,7 +33,7 @@ public class Robot extends IterativeRobot {
 
 	//added this
 	Command teleopCommand;
-    Command autonomousCommand;
+    Command autonCommand;
     SendableChooser chooser;
 
     /**
@@ -42,6 +43,10 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
 		oi = new OI();
         chooser = new SendableChooser();
+        
+        autonCommand = new AutonomousCommand();
+        
+       
        // chooser.addDefault("Default Auto", new ExampleCommand());
 //        chooser.addObject("My Auto", new MyAutoCommand());
         SmartDashboard.putData("Auto mode", chooser);
@@ -70,7 +75,9 @@ public class Robot extends IterativeRobot {
 	 * or additional comparisons to the switch structure below with additional strings & commands.
 	 */
     public void autonomousInit() {
-        autonomousCommand = (Command) chooser.getSelected();
+        //autonCommand = (Command) chooser.getSelected();
+    	
+    	autonCommand.start();
         
 		/* String autoSelected = SmartDashboard.getString("Auto Selector", "Default");
 		switch(autoSelected) {
@@ -84,7 +91,7 @@ public class Robot extends IterativeRobot {
 		} */
     	
     	// schedule the autonomous command (example)
-        if (autonomousCommand != null) autonomousCommand.start();
+        if (autonCommand != null) autonCommand.start();
     }
 
     /**
@@ -99,7 +106,7 @@ public class Robot extends IterativeRobot {
         // teleop starts running. If you want the autonomous to 
         // continue until interrupted by another command, remove
         // this line or comment it out.
-        if (autonomousCommand != null) autonomousCommand.cancel();
+        if (autonCommand != null) autonCommand.cancel();
         
         // hack to temporarily set speed
         shooter.setSpeed( 1.0 );
