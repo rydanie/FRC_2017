@@ -1,14 +1,17 @@
 
 package org.usfirst.frc.team3062.robot;
 
+import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.Joystick;
+
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 import org.usfirst.frc.team3062.robot.commands.AutonomousCommand;
 //import org.usfirst.frc.team3062.robot.commands.ExampleCommand;
-import org.usfirst.frc.team3062.robot.subsystems.Catapult;
+//import org.usfirst.frc.team3062.robot.subsystems.Catapult;
 import org.usfirst.frc.team3062.robot.subsystems.Chassis;
 //import org.usfirst.frc.team3062.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team3062.robot.subsystems.Shooter;
@@ -29,7 +32,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 	public static final Chassis chassis = new Chassis();
 	public static final Shooter shooter = new Shooter();
-	public static final Catapult catapult = new Catapult();
+	//public static final Catapult catapult = new Catapult();
 
 	//added this
 	Command teleopCommand;
@@ -42,13 +45,15 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
 		oi = new OI();
-        chooser = new SendableChooser();
+        chooser = new SendableChooser<>();
         
-        autonCommand = new AutonomousCommand();
+        //autonCommand = new AutonomousCommand();
         
        
        // chooser.addDefault("Default Auto", new ExampleCommand());
 //        chooser.addObject("My Auto", new MyAutoCommand());
+        CameraServer.getInstance().startAutomaticCapture();
+        
         SmartDashboard.putData("Auto mode", chooser);
     }
 	

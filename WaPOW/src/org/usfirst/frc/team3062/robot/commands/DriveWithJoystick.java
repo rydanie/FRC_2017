@@ -26,18 +26,18 @@ public class DriveWithJoystick extends Command {
     	
     	double leftSpeed = Robot.oi.getLeftSpeed();
     	double rightSpeed = Robot.oi.getRightSpeed();
-    	if(leftSpeed > .1 || leftSpeed < -.1){
+    	if(leftSpeed < .2 && leftSpeed > -.2){
     		leftSpeed = 0;
     	}
     	
-    	if(rightSpeed > .1 || rightSpeed < -.1){
+    	if(rightSpeed < .2 && rightSpeed > -.2){
     		rightSpeed = 0;
     	}
     	
     	Robot.chassis.driveWithJoystick( leftSpeed, rightSpeed );
     	
-    	SmartDashboard.putNumber("Left Speed", Robot.chassis.getLeftEncoder());
-    	SmartDashboard.putNumber("Right Speed", Robot.chassis.getRightEncoder());
+    	SmartDashboard.putNumber("Left Speed", Robot.oi.getLeftSpeed());
+    	SmartDashboard.putNumber("Right Speed", Robot.oi.getRightSpeed());
     	
     	
     	

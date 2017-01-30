@@ -1,6 +1,7 @@
 package org.usfirst.frc.team3062.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
@@ -70,29 +71,29 @@ The axis on the controller follow this mapping
  */
 	
 	
-	Joystick driverStick = new Joystick(0);
-	Joystick alternateStick = new Joystick(1);
-	JoystickButton launchButton = new JoystickButton(driverStick, 6);
-	JoystickButton shooterOnButton = new JoystickButton( driverStick, 3 );
-	JoystickButton shooterOffButton = new JoystickButton( driverStick, 4 );
-	//JoystickButton shootButton = new JoystickButton(rightStick, 1);
-	//JoystickButton upButton = new JoystickButton(rightStick, 3);
-	//JoystickButton downButton = new JoystickButton(rightStick, 2); 
-	//JoystickButton topButton = new JoystickButton(leftStick, 1);
+	XboxController driverStick = new XboxController(0);
+	XboxController alternateStick = new XboxController(1);
+	//XboxController launchButton = new JoystickButton(driverStick, 6);
+	//XboxController shooterOnButton = new JoystickButton( driverStick, 3 );
+	//XboxController shooterOffButton = new JoystickButton( driverStick, 4 );
+	//XboxController shootButton = new JoystickButton(rightStick, 1);
+	//XboxController upButton = new JoystickButton(rightStick, 3);
+	//XboxController downButton = new JoystickButton(rightStick, 2); 
+	//XboxController topButton = new JoystickButton(leftStick, 1);
 	
-	ShooterOn shooterOn = new ShooterOn();
-	ShooterOff shooterOff = new ShooterOff();
-	Launch launchCmd = new Launch();
+	//ShooterOn shooterOn = new ShooterOn();
+	//ShooterOff shooterOff = new ShooterOff();
+	//Launch launchCmd = new Launch();
 	
 	
 	public OI() {
-		shooterOnButton.whenPressed(shooterOn);
-		shooterOffButton.whenPressed(shooterOff);
-		launchButton.whenPressed(launchCmd);
+		//shooterOnButton.whenPressed(shooterOn);
+		//shooterOffButton.whenPressed(shooterOff);
+		//launchButton.whenPressed(launchCmd);
 	}
 
 	public double getLeftSpeed() {	
-		return -driverStick.getRawAxis(2);
+		return -driverStick.getRawAxis(1);
 	}
 	
 	public double getRightSpeed() {
