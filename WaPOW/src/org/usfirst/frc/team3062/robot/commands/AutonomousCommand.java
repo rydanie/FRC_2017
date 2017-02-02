@@ -9,8 +9,17 @@ import org.usfirst.frc.team3062.robot.subsystems.Chassis;
 
 public class AutonomousCommand extends Command {
 
-	public void AutonomousCommand(){
+	public void AutonomousCommand(int i){
 		
+		if(i == -1){
+			
+		}
+		else if(i == 0){
+			
+		}
+		else if(i == 1){
+			
+		}
 	}
 	
 	@Override

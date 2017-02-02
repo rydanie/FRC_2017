@@ -73,6 +73,13 @@ The axis on the controller follow this mapping
 	
 	XboxController driverStick = new XboxController(0);
 	XboxController alternateStick = new XboxController(1);
+	
+	/*
+	 * Added this in on 1/31/17
+	 * Should work, unless driverStick doesn't work with buttons
+	 */
+	Button pneumaticButton = new JoystickButton( driverStick, 1 );
+	
 	//XboxController launchButton = new JoystickButton(driverStick, 6);
 	//XboxController shooterOnButton = new JoystickButton( driverStick, 3 );
 	//XboxController shooterOffButton = new JoystickButton( driverStick, 4 );
@@ -99,6 +106,20 @@ The axis on the controller follow this mapping
 	public double getRightSpeed() {
 		return -driverStick.getRawAxis(5);
 	}
+	
+	/*
+	 * Added this in on 1/31/17
+	 * Probably works
+	 * 
+	 * Reads input of controller corresponding to the A Button and 
+	 * returns true or false.
+	 */
+	public boolean aButtonPressed(){
+		// one of these two methods will work, try getAButton() first
+		return driverStick.getAButton();
+		//return driverStick.getRawButton(1);
+	}
+	
 }
 
 

@@ -24,7 +24,7 @@ public class Chassis extends Subsystem {
     Encoder rightEncoder;
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-   
+    
     double circumference;
     double disRo;
     double totalDis2;
