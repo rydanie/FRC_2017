@@ -2,15 +2,17 @@ package org.usfirst.frc.team3062.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.Solenoid;
 
 import org.usfirst.frc.team3062.robot.Robot;
 import org.usfirst.frc.team3062.robot.subsystems.Chassis;
+//import org.usfirst.frc.team3062.robot.subsystems.Solenoid;
 
 /**
  *
  */
 public class DriveWithJoystick extends Command {
-
+	
     public DriveWithJoystick() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
@@ -38,8 +40,6 @@ public class DriveWithJoystick extends Command {
     	
     	SmartDashboard.putNumber("Left Speed", Robot.oi.getLeftSpeed());
     	SmartDashboard.putNumber("Right Speed", Robot.oi.getRightSpeed());
-    	
-    	
     	
     }    
     

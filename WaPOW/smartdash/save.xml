@@ -1,22 +1,22 @@
 <xml version="1.0">
 <dashboard>
 	<widget field="Turning Distance" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
-		<location x="1" y="42"/>
+		<location x="2" y="42"/>
 	</widget>
 	<static-widget class="edu.wpi.first.smartdashboard.gui.elements.CameraServerViewer">
-		<location x="175" y="15"/>
+		<location x="176" y="19"/>
 		<width>566</width>
 		<height>425</height>
 		<property name="Camera Choice" value=""/>
 	</static-widget>
 	<widget field="Right Speed" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
-		<location x="1" y="88"/>
+		<location x="2" y="88"/>
 	</widget>
 	<widget field="Left Speed" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
 		<location x="2" y="65"/>
 	</widget>
 	<widget field="Distance" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
-		<location x="0" y="19"/>
+		<location x="2" y="19"/>
 	</widget>
 	<widget field="Auto mode" type="String Chooser" class="edu.wpi.first.smartdashboard.gui.elements.Chooser">
 		<location x="0" y="0"/>
